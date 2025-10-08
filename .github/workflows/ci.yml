@@ -46,14 +46,7 @@ jobs:
         pytest -q --junitxml=reports/junit.xml
 
     - name: Upload test report
-      uses: actions/upload-artifact@v3
-      with:
-        name: pytest-report-${{ matrix.python-version }}
-        path: reports/junit.xml
-
-        
-    - name: Upload test report
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v4   # ✅ Updated to v4
       with:
         name: pytest-report-${{ matrix.python-version }}
         path: reports/junit.xml
