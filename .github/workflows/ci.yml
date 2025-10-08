@@ -50,3 +50,10 @@ jobs:
       with:
         name: pytest-report-${{ matrix.python-version }}
         path: reports/junit.xml
+
+        
+    - name: Upload test report
+      uses: actions/upload-artifact@v4
+      with:
+        name: pytest-report-${{ matrix.python-version }}
+        path: reports/junit.xml
